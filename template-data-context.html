@@ -1,0 +1,22 @@
+<head>
+  <title>template-data-context</title>
+</head>
+
+<body>
+  <h1>Welcome to Meteor!</h1>
+
+  {{> hello}}
+</body>
+
+<template name="hello">
+  <h2>Hello template</h2>
+  <p>Template personsList:</p>
+  {{> personsList persons=persons}}
+</template>
+
+<template name="personsList">
+  <p>Click on a name:</p>
+  {{#each persons}}
+    <p class="person-name">{{toUpper name}}</p>
+  {{/each}}
+</template>
